@@ -3,7 +3,7 @@
    Utilities are mocked upon Nilearn.
 """
 import warnings
-from nilearn.datasets.utils import _uncompress_file, _fetch_file
+from nilearn.datasets._utils import uncompress_file, fetch_single_file
 
 
 def fetch_abide(data_dir=None):
@@ -28,10 +28,10 @@ def fetch_abide(data_dir=None):
     url = 'https://osf.io/hc4md/download'
 
     # Download the zip file, first
-    dl_file = _fetch_file(url, data_dir=data_dir)
+    dl_file = fetch_single_file(url, data_dir=data_dir)
 
     # Second, uncompress the downloaded zip file
-    _uncompress_file(dl_file, verbose=2)
+    uncompress_file(dl_file, verbose=2)
 
     return data_dir
 
@@ -58,10 +58,10 @@ def fetch_acpi(data_dir=None):
     url = 'https://osf.io/ab4q6/download'
 
     # Download the zip file, first
-    dl_file = _fetch_file(url, data_dir=data_dir)
+    dl_file = fetch_single_file(url, data_dir=data_dir)
 
     # Second, uncompress the downloaded zip file
-    _uncompress_file(dl_file, verbose=2)
+    uncompress_file(dl_file, verbose=2)
 
     return data_dir
 
@@ -88,10 +88,10 @@ def fetch_cobre(data_dir=None):
     url = 'https://osf.io/gyrnx/download'
 
     # Download the zip file, first
-    dl_file = _fetch_file(url, data_dir=data_dir)
+    dl_file = fetch_single_file(url, data_dir=data_dir)
 
     # Second, uncompress the downloaded zip file
-    _uncompress_file(dl_file, verbose=2)
+    uncompress_file(dl_file, verbose=2)
 
     return data_dir
 
@@ -118,10 +118,10 @@ def fetch_adni(data_dir=None):
     url = 'https://osf.io/xhrcs/download'
 
     # Download the zip file, first
-    dl_file = _fetch_file(url, data_dir=data_dir)
+    dl_file = fetch_single_file(url, data_dir=data_dir)
 
     # Second, uncompress the downloaded zip file
-    _uncompress_file(dl_file, verbose=2)
+    uncompress_file(dl_file, verbose=2)
 
     return data_dir
 
@@ -148,10 +148,10 @@ def fetch_adnidod(data_dir=None):
     url = 'https://osf.io/5aeny/download'
 
     # Download the zip file, first
-    dl_file = _fetch_file(url, data_dir=data_dir)
+    dl_file = fetch_single_file(url, data_dir=data_dir)
 
     # Second, uncompress the downloaded zip file
-    _uncompress_file(dl_file, verbose=2)
+    uncompress_file(dl_file, verbose=2)
 
     return data_dir
 
@@ -178,10 +178,10 @@ def fetch_hcp1(data_dir=None):
     url = 'https://osf.io/5p7vb/download'
 
     # Download the zip file, first
-    dl_file = _fetch_file(url, data_dir=data_dir)
+    dl_file = fetch_single_file(url, data_dir=data_dir)
 
     # Second, uncompress the downloaded zip file
-    _uncompress_file(dl_file, verbose=2)
+    uncompress_file(dl_file, verbose=2)
 
     return data_dir
 
@@ -208,9 +208,9 @@ def fetch_hcp2(data_dir=None):
     url = 'https://osf.io/sxafp/download'
 
     # Download the zip file, first
-    dl_file = _fetch_file(url, data_dir=data_dir)
+    dl_file = fetch_single_file(url, data_dir=data_dir)
 
     # Second, uncompress the downloaded zip file
-    _uncompress_file(dl_file, verbose=2)
+    uncompress_file(dl_file, verbose=2)
 
     return data_dir

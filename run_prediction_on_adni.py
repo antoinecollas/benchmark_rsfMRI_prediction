@@ -120,7 +120,7 @@ if csv_file is None:
 phenotypic = pd.read_csv(csv_file)
 
 # Connectomes per measure
-from connectome_matrices import ConnectivityMeasure
+from nilearn.connectome import ConnectivityMeasure
 from sklearn.covariance import LedoitWolf
 measures = ['correlation', 'partial correlation', 'tangent']
 
